@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ProjetL3</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="log_in">LOG IN</string>
+    <string name="login_password_hint">Mot de passe</string>
+    <string name="login_password_confirm_hint">Confirmation du mot de passe</string>
+    <string name="login_login_hint">Identifiant (email)</string>
+    <string name="login_login">Identification</string>
+    <string name="login_create_account">Création de compte</string>
+    <string name="login_welcome">Bienvenue sur WineRoom</string>
+    <string name="prompt_email">Email</string>
+
+
+    <string name="error_field_required">Champs requis</string>
+    <string name="error_invalid_email">Identifiants invalides</string>
+
+    <string name="ca_email">Email</string>
+</resources>
