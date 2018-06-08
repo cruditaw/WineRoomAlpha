@@ -1,8 +1,11 @@
 package com.example.cdsm.projetl3;
 
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.CircularProgressDrawable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.ActivityCompat;
 import android.os.Bundle;
 import android.widget.ProgressBar;
 
@@ -11,7 +14,7 @@ import com.example.cdsm.projetl3.entities.DaoMaster;
 import com.example.cdsm.projetl3.entities.DaoSession;
 import com.example.cdsm.projetl3.utils.OnLoginAttemptListener;
 
-public class LoginActivity extends AppCompatActivity implements OnLoginAttemptListener {
+public class LoginActivity extends FragmentActivity /*implements OnLoginAttemptListener*/ {
 
     //private UserLoginTask mAuthTask = null;
 
@@ -40,14 +43,26 @@ public class LoginActivity extends AppCompatActivity implements OnLoginAttemptLi
         daoSession = daoMaster.newSession();
         appUserDao = daoSession.getAppUserDao();
 
-        //loginFragment = (LoginFragment) getSupportFragmentManager().findFragmentById(R.id
-        //        .login_fragment);
+
+        loginFragment = (LoginFragment) getSupportFragmentManager().findFragmentById(R.id
+                .login_fragment);
 
 
     }
 
-    @Override
-    public void onLocalLoginAttempt(String m, String p) {
+    /*
+        @Override
+        public void onLocalLoginAttempt(String m, String p) {
 
+        }
+    */
+    public AppUserDao getAppUserDao() {
+        return appUserDao;
+    }
+
+
+    @Override
+    public void onAttachFragment(Fragment fragment) {
+        super.onAttachFragment(fragment);
     }
 }
